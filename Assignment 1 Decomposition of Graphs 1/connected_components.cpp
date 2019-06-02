@@ -14,9 +14,6 @@ bool nodePresent(vector<int>& visited, int node) {
 
 void dfs(const vector<vector<int> > &adj, vector<int>& visit, int x) {
 	visit.push_back(x);
-	/*for (int j = 0; j < adj[x].size(); j++)
-		cout << adj[x][j] << ",";
-	cout << endl;*/
 	for (int j = 0; j < adj[x].size(); j++)
 		if (!nodePresent(visit, adj[x][j]))
 			dfs(adj, visit, adj[x][j]);
